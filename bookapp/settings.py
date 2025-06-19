@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t0%$!3m*xxi(+5rcqbq&775k&r^#=nia4f5(j(%m$1p(ilf2!@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bookweb-dv4j.onrender.com']
 
 
 # Application definition
