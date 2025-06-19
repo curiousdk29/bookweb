@@ -131,9 +131,11 @@ MEDIA_ROOT = BASE_DIR / 'media'
 LOGIN_URL = 'login'
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'duvy3rlsd',
-    'API_KEY': 398847735342516,
-    'API_SECRET':'vFq1X9z5_uh1jNNSLrh-4lCoEMw'
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+    'RESOURCE_TYPE': 'raw'
 }
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
