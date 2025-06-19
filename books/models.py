@@ -1,13 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
-from cloudinary_storage.storage import MediaCloudinaryStorage
+from cloudinary_storage.storage import RawMediaCloudinaryStorage
 
 class Book(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     age_group = models.CharField(max_length=50)
     level = models.CharField(max_length=50)
-    file = models.FileField(storage=MediaCloudinaryStorage(), blank=True, null=True)
+    file = models.FileField(storage=RawMediaCloudinaryStorage(), blank=True, null=True)
     uploaded_by = models.ForeignKey(User, on_delete=models.CASCADE)
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
