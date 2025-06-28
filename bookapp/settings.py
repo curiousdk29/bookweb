@@ -141,7 +141,6 @@ CLOUDINARY_STORAGE = {
         'type': 'upload'
     }
 }
-}
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
 
