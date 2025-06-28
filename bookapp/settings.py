@@ -134,6 +134,13 @@ CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'duvy3rlsd',
     'API_KEY': '398847735342516',
     'API_SECRET':'vFq1X9z5_uh1jNNSLrh-4lCoEMw',
+    'RESOURCE_TYPE': 'raw',
+    'UPLOAD_OPTIONS': {
+        'resource_type': 'raw',
+        'access_mode': 'public',
+        'type': 'upload'
+    }
+}
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
